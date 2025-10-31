@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    int i;             // variavel do for
+    int i;             // variavel para os loops
     int casasTorre = 5;
     int casasBispo = 5;
     int casasRainha = 8;
+
+    int casasBaixo = 2;   // movimento do cavalo para baixo
+    int casasEsquerda = 1; // movimento do cavalo para a esquerda
 
     // Movimento da Torre (anda para a direita)
     printf("Movimento da Torre:\n");
@@ -27,6 +30,21 @@ int main() {
         printf("Esquerda\n");
         i++;
     } while(i < casasRainha);
+
+    // Movimento do Cavalo (em L: 2 para baixo, 1 para esquerda)
+    printf("\nMovimento do Cavalo:\n");
+
+    // loop for para descer 2 casas
+    for(i = 0; i < casasBaixo; i++) {
+        printf("Baixo\n");
+    }
+
+    // loop while aninhado para 1 casa para a esquerda
+    int j = 0;
+    while(j < casasEsquerda) {
+        printf("Esquerda\n");
+        j++;
+    }
 
     return 0;
 }
